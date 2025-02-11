@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!--
+ * @author      Andreas Knollmann
+ * @copyright   2014-2025 Softwareentwicklung Andreas Knollmann
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Infrangible_EavAttributes::category_attributes" title="Category" translate="title" module="Infrangible_EavAttributes" sortOrder="50" parent="Magento_Backend::stores_attributes" action="eav_attribute/category_attribute/" resource="Magento_Catalog::attributes_attributes"/>
+        <add id="Infrangible_EavAttributes::customer_attributes" title="Customer" translate="title" module="Infrangible_EavAttributes" sortOrder="51" parent="Magento_Backend::stores_attributes" action="eav_attribute/customer_attribute/" resource="Magento_Catalog::attributes_attributes"/>
+        <add id="Infrangible_EavAttributes::address_attributes" title="Address" translate="title" module="Infrangible_EavAttributes" sortOrder="51" parent="Magento_Backend::stores_attributes" action="eav_attribute/address_attribute/" resource="Magento_Catalog::attributes_attributes"/>
+    </menu>
+</config>

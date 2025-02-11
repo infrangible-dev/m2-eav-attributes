@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!--
+ * @author      Andreas Knollmann
+ * @copyright   2014-2025 Softwareentwicklung Andreas Knollmann
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Infrangible\EavAttributes\Block\Adminhtml\Customer\Attribute\Edit" name="attribute_edit_content"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Infrangible\EavAttributes\Block\Adminhtml\Attribute\Edit\Tabs" name="attribute_edit_tabs">
+                <container label="Properties" name="attribute_edit_tabs.properties" as="properties">
+                    <block class="Infrangible\EavAttributes\Block\Adminhtml\Attribute\Edit\Tab\Properties\Base" name="attribute_edit_tabs.properties.properties.base" as="base"/>
+                    <block class="Magento\Eav\Block\Adminhtml\Attribute\Edit\Options\Options" name="attribute_edit_tabs.properties.properties.options" as="options"/>
+                    <block class="Infrangible\EavAttributes\Block\Adminhtml\Customer\Attribute\Edit\Tab\Properties\Advanced" name="attribute_edit_tabs.properties.properties.advanced" as="advanced"/>
+                </container>
+                <block class="Magento\Eav\Block\Adminhtml\Attribute\Edit\Options\Labels" name="attribute_edit_tabs.labels" as="labels"/>
+                <block class="Infrangible\EavAttributes\Block\Adminhtml\Customer\Attribute\Edit\Tab\Storefront" name="attribute_edit_tabs.storefront" as="storefront"/>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="js">
+            <block class="Magento\Backend\Block\Template" name="attribute_edit_js" template="Infrangible_EavAttributes::attribute/js.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
